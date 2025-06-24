@@ -1,6 +1,7 @@
 from server.app import app, db
 from server.models import Customer, Item, Review
 
+
 class TestAssociationProxy:
     '''Customer in models.py'''
 
