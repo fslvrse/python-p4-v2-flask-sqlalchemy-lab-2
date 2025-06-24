@@ -1,7 +1,5 @@
 from server.app import app, db
-
 from server.models import Customer, Item, Review
-
 
 class TestReview:
     '''Review model in models.py'''
@@ -33,8 +31,8 @@ class TestReview:
             assert 'customer_id' in Review.__table__.columns
             assert 'item_id' in Review.__table__.columns
 
-            c = Customer()
-            i = Item()
+            c = Customer(name='Test Customer')
+            i = Item(name='Test Item', price=9.99)
             db.session.add_all([c, i])
             db.session.commit()
 

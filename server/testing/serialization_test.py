@@ -1,7 +1,5 @@
 from server.app import app, db
-
 from server.models import Customer, Item, Review
-
 
 class TestSerialization:
     '''models in models.py'''
@@ -42,8 +40,8 @@ class TestSerialization:
     def test_review_is_serializable(self):
         '''review is serializable'''
         with app.app_context():
-            c = Customer()
-            i = Item()
+            c = Customer(name='Test Customer')
+            i = Item(name='Test Item', price=9.99)
             db.session.add_all([c, i])
             db.session.commit()
 
