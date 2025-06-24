@@ -1,5 +1,6 @@
-from server.app import app, db
-from server.models import Customer, Item, Review
+from models import Customer, Item, Review
+from app import app, db
+
 
 class TestSerialization:
     '''models in models.py'''
